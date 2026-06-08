@@ -23,13 +23,15 @@ Este repositorio actúa exclusivamente como **vitrina de portafolio técnico, do
 ## 🎨 DEMOSTRACIÓN VISUAL Y DE INTERFAZ
 
 
+
 | 🖥️ Dashboard Principal (Lobby) | 👥 Sincronización Local (Enlace Dúo) |
 |:---:|:---:|
-| ![Dashboard Overview](./caps/dashboard-lobby.png) | ![Duo Link Interface](./caps/dashboard-duo.png) |
+| ![Dashboard Overview](./caps/dashboard_lobby.png) | ![Duo Link Interface](./caps/dashboard_duo.png) |
 
 | 🧠 Panel de Desafíos Avanzados | 📊 Gráficas de Telemetría Histórica |
 |:---:|:---:|
-| ![Daily Challenges](./caps/dashboard-retos.png) | ![Stats Panel](./caps/stats-charts.png) |
+| ![Daily Challenges](./caps/dashboard_retos.png) | ![Stats Panel](./caps/stats_charts.png) |
+
 
 
 ---
@@ -113,9 +115,10 @@ Al ejecutarse el punto de entrada principal (`main.py`), la aplicación levanta 
 ## 🖼️ CAPTURAS ADICIONALES DEL DESARROLLO
 
 
+
 | 🛠️ Consola de Eventos del Sidecar |
 |:---:|
-| ![Logs Console](./caps/console-logs.png) |
+| ![Logs Console](./caps/console_logs.png) |
 
 ---
 *MASTER OS es un desarrollo de ingeniería privado con fines de análisis competitivo de alto rendimiento. Las marcas registradas y nombres de personajes pertenecen a Riot Games Inc.*
