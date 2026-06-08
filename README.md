@@ -14,7 +14,7 @@ Optimiza el consumo de hardware aislando la computación pesada en subprocesos i
 
 ## 🔒 NOTA SOBRE EL CÓDIGO FUENTE (PROPIEDAD INTELECTUAL)
 
-El código base de producción se mantiene estrictamente en un **repositorio privado** para proteger la propiedad intelectual del software, salvaguardar los algoritmos propietarios de análisis y evitar infracciones con los términos de servicio de plataformas externas (*Riot Games API / Vanguard*). 
+El código base de producción se mantiene estrictamente en un **repositorio privado** para proteger la propiedad intelectual del software, salvaguardar los algoritmos propietarios de análisis y evitar infringciones con los términos de servicio de plataformas externas (*Riot Games API / Vanguard*).
 
 Este repositorio actúa exclusivamente como **vitrina de portafolio técnico, documentación de ingeniería de alto nivel y demostración de arquitectura**.
 
@@ -25,11 +25,11 @@ Este repositorio actúa exclusivamente como **vitrina de portafolio técnico, do
 
 | 🖥️ Dashboard Principal (Lobby) | 👥 Sincronización Local (Enlace Dúo) |
 |:---:|:---:|
-| ![Dashboard Overview](./imagenes%20del%20proyecto%20moba/dashboard-lobby.png) | ![Duo Link Interface](./imagenes%20del%20proyecto%20moba/dashboard-duo.png) |
+| ![Dashboard Overview](./caps/dashboard-lobby.png) | ![Duo Link Interface](./caps/dashboard-duo.png) |
 
 | 🧠 Panel de Desafíos Avanzados | 📊 Gráficas de Telemetría Histórica |
 |:---:|:---:|
-| ![Daily Challenges](./imagenes%20del%20proyecto%20moba/dashboard-retos.png) | ![Stats Panel](./imagenes%20del%20proyecto%20moba/stats-charts.png) |
+| ![Daily Challenges](./caps/dashboard-retos.png) | ![Stats Panel](./caps/stats-charts.png) |
 
 ---
 
@@ -58,16 +58,14 @@ El backend centraliza los servicios web en una única instancia local headless q
 ## 🗄️ MODELO DE DATOS CRIPTOGRÁFICO (`master_core.db`)
 
 El sistema utiliza una base de datos relacional local **SQLite3** con altos estándares de seguridad para el manejo de la sesión local:
-* **Seguridad Criptográfica**: Las contraseñas se almacenan procesadas mediante **PBKDF2-HMAC-SHA256** utilizando 120.000 iteraciones de hash y una sal (*salt*) de 32 bytes.
+* **Security**: Las contraseñas se almacenan procesadas mediante **PBKDF2-HMAC-SHA256** utilizando 120.000 iteraciones de hash y una sal (*salt*) de 32 bytes.
 * **Gestión de Sesiones**: Generación de identificadores criptográficos opacos mediante tokens seguros urlsafe de 48 bytes.
 * **Tablas de la Arquitectura**:
-  * `usuarios` / `sesiones`: Registro, autenticación y expiración ISO UTC de perfiles.
-  * `configuracion`: Parámetros de la interfaz del usuario serializados en formato JSON.
-  * `historial_partidas`: Almacenamiento estadístico de rendimiento (oro, campeones, victorias/derrotas).
-  * `retos_activos` / `pool_retos`: Tabla de control y pre-semillado de desafíos analíticos limitados a un máximo de 3 activos en simultáneo.
-
----
-
+* `usuarios` / `sesiones`: Registro, autenticación y expiración ISO UTC de perfiles.
+* `configuracion`: Parámetros de la interfaz del usuario serializados en formato JSON.
+* `historial_partidas`: Almacenamiento estadístico de rendimiento (oro, campeones, victorias/derrotas).
+* `retos_activos` / `pool_retos`: Tabla de control y pre-semillado de desafíos analíticos limitados a un máximo de 3 activos en simultáneo.
+    
 ## 📊 FUNCIONALIDADES CLAVE IMPLEMENTADAS
 
 ### 🔌 Inyecciones LCU Avanzadas & Rescate Automatizado
@@ -106,11 +104,17 @@ Al ejecutarse el punto de entrada principal (`main.py`), la aplicación levanta 
 2. `Dash-Refresh`: Sincronización del perfil y analíticas del invocador con la LCU cada 8000 ms.
 3. `Coach-Brain`: Máquina de estados principal del cerebro analítico (Muestreo: 700 ms en Selección de campeones / 1000 ms dentro de partida / 2000 ms en Lobby).
 4. `Auth-Sync`: Validación constante de la sesión del usuario local cada 5000 ms.
-5. `TTS-Worker`: Cola secuencial no bloqueante para el sintetizador de voz
+5. `TTS-Worker`: Cola secuencial no bloqueante para el sintetizador de voz.
 6. `Mic-Coach`: Escucha e interceptación de peticiones por micrófono bajo la palabra gatillo.
 
-🖼️ CAPTURAS ADICIONALES DEL DESARROLLO                        
-🛠️Consola de Eventos del Sidecar                                                         📊Gráficas de Telemetría Histórica
+---
+
+## 🖼️ CAPTURAS ADICIONALES DEL DESARROLLO
 
 
-MASTER OS es un desarrollo de ingeniería privado con fines de análisis competitivo de alto rendimiento. Las marcas registradas y nombres de personajes pertenecen a Riot Games Inc.
+| 🛠️ Consola de Eventos del Sidecar |
+|:---:|
+| ![Logs Console](./caps/console-logs.png) |
+
+---
+*MASTER OS es un desarrollo de ingeniería privado con fines de análisis competitivo de alto rendimiento. Las marcas registradas y nombres de personajes pertenecen a Riot Games Inc.*
