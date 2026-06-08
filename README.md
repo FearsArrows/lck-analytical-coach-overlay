@@ -31,6 +31,7 @@ Este repositorio actúa exclusivamente como **vitrina de portafolio técnico, do
 |:---:|:---:|
 | ![Daily Challenges](./caps/dashboard-retos.png) | ![Stats Panel](./caps/stats-charts.png) |
 
+
 ---
 
 ## 🧬 ARQUITECTURA TÉCNICA DEL SISTEMA
